@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
 import {View, Text} from 'react-native';
 
-const App: FC = () => {
+const Login: FC = () => {
   return (
     <View>
-      <Text>App</Text>
+      <Text>Login</Text>
     </View>
   );
 };
 
-export default App;
+export default Login;

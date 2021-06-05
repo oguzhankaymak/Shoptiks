@@ -6,12 +6,15 @@ import {name as appName} from './app.json';
 import {NavigationContainer} from '@react-navigation/native';
 import Colors from './app/theme/Colors';
 import Navigation from './app/containers/Navigation';
+import {GlobalProvider} from './app/context/Provider';
 
 const Root: FC = () => (
   <SafeAreaView style={{flex: 1, backgroundColor: Colors.white}}>
-    <NavigationContainer>
-      <Navigation />
-    </NavigationContainer>
+    <GlobalProvider>
+      <NavigationContainer>
+        <Navigation />
+      </NavigationContainer>
+    </GlobalProvider>
   </SafeAreaView>
 );
 

@@ -53,6 +53,8 @@ const Login: FC = () => {
               placeholder="Enter password"
               value={password}
               onChangeText={setPassword}
+              secureTextEntry={true}
+              autoCompleteType={'password'}
             />
           </View>
         </View>

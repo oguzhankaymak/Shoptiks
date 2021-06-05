@@ -45,4 +45,10 @@ export default StyleSheet.create({
     color: Colors.gray,
     padding: isTablet ? 20 : 8,
   },
+
+  warningMessageText: {
+    marginTop: 10,
+    color: Colors.darkRed,
+    fontSize: Fonts.size.h15,
+  },
 });

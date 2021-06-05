@@ -1,15 +1,23 @@
 import React, {FC, useState} from 'react';
-import {View, Text, TextInput} from 'react-native';
+import {View, Text, TextInput, Alert} from 'react-native';
 
+import {useAppSelector, useAppDispatch} from '../../../redux/Hooks';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Button, {ButtonTypes} from '../../../components/button/Button';
 import {emailIsValid} from '../../../utilities/Function';
-import {INVALID_EMAIL} from '../../../constans/Messages';
+import {
+  INVALID_EMAIL,
+  INVALID_PASSWORD,
+  ALERT_TITLE_WARNING,
+} from '../../../constans/Messages';
 
 import styles from './styles/Login.style';
+import {loginAction} from '../../../redux/auth/actions/Actions';
 
 const Login: FC = () => {
-  const [loading, setLoading] = useState<boolean>(false);
+  const auth = useAppSelector(state => state.authReducer);
+  const dispatch = useAppDispatch();
+
   const [email, setEmail] = useState<string>('');
   const [isValidEmail, setIsValidEmail] = useState<boolean>(false);
   const [password, setPassword] = useState<string>('');
@@ -21,6 +29,21 @@ const Login: FC = () => {
     } else {
       setIsValidEmail(false);
     }
+  };
+
+  const loginCheck = () => {
+    let errorMessage;
+    if (!email || email?.length === 0 || !isValidEmail) {
+      errorMessage = INVALID_EMAIL;
+    } else if (!password || password?.length === 0) {
+      errorMessage = INVALID_PASSWORD;
+    }
+
+    errorMessage
+      ? Alert.alert(ALERT_TITLE_WARNING + '!', errorMessage + '.', [
+          {text: 'Okay', onPress: () => {}},
+        ])
+      : dispatch(loginAction(email) as any);
   };
 
   return (
@@ -61,9 +84,9 @@ const Login: FC = () => {
         <Button
           type={ButtonTypes.primary}
           text={'Login'}
-          loading={loading}
-          disabled={loading}
-          action={() => console.log('action')}
+          loading={auth?.isLoading}
+          disabled={auth?.isLoading}
+          action={loginCheck}
         />
       </KeyboardAwareScrollView>
     </View>

@@ -5,6 +5,7 @@ import styles from './styles/CartScreen.style';
 import {useAppSelector} from '../../../redux/Hooks';
 import CartList from '../../../components/cartList/Index';
 import {ICartProduct} from '../../../redux/cart/initialState/InitialState';
+import {calcuateTotalPrice} from '../../../utilities/Function';
 
 const CartScreen = () => {
   const cart = useAppSelector(state => state.cartReducer.cartItem);
@@ -26,7 +27,9 @@ const CartScreen = () => {
   const _renderFooter = () => {
     return (
       <View style={styles.footer}>
-        <Text style={styles.totalPriceText}>Total: 00$</Text>
+        <Text style={styles.totalPriceText}>
+          Total: {calcuateTotalPrice(cart)}$
+        </Text>
         <TouchableOpacity style={styles.completeOrderButton}>
           <Text style={styles.completeOrderButtonText}>Complete Order</Text>
         </TouchableOpacity>

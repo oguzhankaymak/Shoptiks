@@ -34,3 +34,32 @@ export const addToCartAction = (product: IProduct) => {
     });
   };
 };
+
+export const deleteProductFromCartAction = (cartProduct: ICartProduct) => {
+  return async (dispatch: any, getState: any) => {
+    const state = getState();
+
+    var newCartArray = [...state.cartReducer.cartItem];
+
+    //check product
+    var objIndex = newCartArray?.findIndex(obj => obj.id === cartProduct.id);
+
+    if (objIndex !== -1) {
+      //check quantity
+      if (newCartArray[objIndex].quantity > 1) {
+        newCartArray[objIndex].quantity = newCartArray[objIndex].quantity - 1;
+        return dispatch({
+          type: CartActionTypes.ADD_TO_CART,
+          payload: newCartArray,
+        });
+      }
+
+      newCartArray.splice(objIndex, 1);
+
+      return dispatch({
+        type: CartActionTypes.ADD_TO_CART,
+        payload: newCartArray,
+      });
+    }
+  };
+};

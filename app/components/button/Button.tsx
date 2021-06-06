@@ -7,6 +7,7 @@ import styles from './styles/Button.style';
 export enum ButtonTypes {
   primary = 'primary',
   secondary = 'secondary',
+  danger = 'danger',
 }
 
 type Props = {

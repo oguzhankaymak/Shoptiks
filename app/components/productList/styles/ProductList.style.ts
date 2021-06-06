@@ -1,9 +1,9 @@
 import {StyleSheet} from 'react-native';
-import {deviceHeight} from '../../../utilities/Metrics';
+import {deviceWidth} from '../../../utilities/Metrics';
 
 export default StyleSheet.create({
   list: {
     flex: 1,
-    width: deviceHeight - 20,
+    width: deviceWidth - 20,
   },
 });

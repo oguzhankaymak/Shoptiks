@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeStack from './homeStack/HomeStack';
 import ContactScreen from './contact/ContactScreen';
-import {ContactIcon, HomeIcon} from '../../../components/icons';
+import {ContactIcon, HomeIcon} from '../../components/icons';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +21,7 @@ const BottomTabNavigation: FC = () => {
         component={HomeStack}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({focused, color, size}) => {
+          tabBarIcon: ({color, size}) => {
             return (
               <HomeIcon
                 stroke={color}
@@ -38,7 +38,7 @@ const BottomTabNavigation: FC = () => {
         component={ContactScreen}
         options={{
           tabBarLabel: 'Contact',
-          tabBarIcon: ({focused, color, size}) => {
+          tabBarIcon: ({color, size}) => {
             return (
               <ContactIcon
                 stroke={color}

@@ -32,4 +32,19 @@ export default {
       color: Colors.white,
     },
   }),
+
+  danger: StyleSheet.create({
+    button: {
+      width: 200,
+      height: isTablet ? 40 : 30,
+      borderRadius: 5,
+      backgroundColor: Colors.dangerRed,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+
+    buttonText: {
+      color: Colors.white,
+    },
+  }),
 };

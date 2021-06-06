@@ -6,17 +6,24 @@ import styles from './styles/Button.style';
 
 export enum ButtonTypes {
   primary = 'primary',
+  secondary = 'secondary',
 }
 
 type Props = {
   type: ButtonTypes;
   text: string;
   action: () => void;
-  loading: boolean;
-  disabled: boolean;
+  loading?: boolean;
+  disabled?: boolean;
 };
 
-const Button: FC<Props> = ({type, text, action, loading, disabled}) => {
+const Button: FC<Props> = ({
+  type,
+  text,
+  action,
+  loading = false,
+  disabled = false,
+}) => {
   return (
     <TouchableOpacity
       style={styles[type].button}

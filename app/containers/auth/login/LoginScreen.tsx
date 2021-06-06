@@ -81,13 +81,15 @@ const Login: FC = () => {
             />
           </View>
         </View>
-        <Button
-          type={ButtonTypes.primary}
-          text={'Login'}
-          loading={auth?.isLoading}
-          disabled={auth?.isLoading}
-          action={loginCheck}
-        />
+        <View style={styles.footer}>
+          <Button
+            type={ButtonTypes.primary}
+            text={'Login'}
+            loading={auth?.isLoading}
+            disabled={auth?.isLoading}
+            action={loginCheck}
+          />
+        </View>
       </KeyboardAwareScrollView>
     </View>
   );

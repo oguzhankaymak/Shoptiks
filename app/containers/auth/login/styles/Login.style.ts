@@ -51,4 +51,8 @@ export default StyleSheet.create({
     color: Colors.darkRed,
     fontSize: Fonts.size.h15,
   },
+
+  footer: {
+    marginTop: 40,
+  },
 });

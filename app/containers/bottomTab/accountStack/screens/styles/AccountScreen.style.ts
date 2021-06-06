@@ -1,4 +1,4 @@
-import {deviceWidth} from './../../../../../utilities/Metrics';
+import {deviceWidth} from '../../../../../utilities/Metrics';
 import {StyleSheet} from 'react-native';
 import Colors from '../../../../../theme/Colors';
 import Fonts from '../../../../../theme/Fonts';

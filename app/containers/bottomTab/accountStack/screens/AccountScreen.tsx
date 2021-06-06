@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-import {ArrowRightIcon} from '../../../../components/icons';
 
-import styles from './style/AccountScreen.style';
+import styles from './styles/AccountScreen.style';
+import {ArrowRightIcon} from '../../../../components/icons';
 
 const AccountScreen: FC = () => {
   return (

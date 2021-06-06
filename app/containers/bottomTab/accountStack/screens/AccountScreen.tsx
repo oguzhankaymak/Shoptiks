@@ -4,21 +4,25 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import styles from './styles/AccountScreen.style';
 import {ArrowRightIcon} from '../../../../components/icons';
 
-const AccountScreen: FC = () => {
+const AccountScreen: FC<any> = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.titleText}>Account</Text>
       </View>
       <View style={styles.option}>
-        <TouchableOpacity style={styles.shadow}>
+        <TouchableOpacity
+          style={styles.shadow}
+          onPress={() => navigation.navigate('LastOrdersScreen')}>
           <View style={styles.button}>
             <Text>Last Orders</Text>
             <ArrowRightIcon size={24} />
           </View>
         </TouchableOpacity>
         <View style={styles.option}>
-          <TouchableOpacity style={styles.shadow}>
+          <TouchableOpacity
+            style={styles.shadow}
+            onPress={() => navigation.navigate('ProfileScreen')}>
             <View style={styles.button}>
               <Text>Profile</Text>
               <ArrowRightIcon size={24} />

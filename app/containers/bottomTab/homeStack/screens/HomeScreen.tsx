@@ -9,7 +9,7 @@ import Colors from '../../../../theme/Colors';
 import {useAppDispatch} from '../../../../redux/Hooks';
 import {addToCartAction} from '../../../../redux/cart/actions/Actions';
 
-const HomeScreen: FC = () => {
+const HomeScreen: FC = ({navigation}) => {
   const dispatch = useAppDispatch();
   const [products, setProducts] = useState<IProduct[] | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -46,7 +46,7 @@ const HomeScreen: FC = () => {
           addToCartPress={(product: IProduct) =>
             dispatch(addToCartAction(product) as any)
           }
-          detailPress={() => console.log('detail screen')}
+          detailPress={() => navigation.navigate('ProductDetailScreen')}
         />
       );
     }

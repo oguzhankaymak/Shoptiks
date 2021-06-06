@@ -13,4 +13,31 @@ const calcuateTotalPrice = (cartProducts: ICartProduct[]) => {
   return totalPrice;
 };
 
-export {emailIsValid, calcuateTotalPrice};
+const fullNameIsValid = (text: string) => {
+  if (text.length < 5 || !text.includes(' ')) {
+    return false;
+  }
+  return true;
+};
+
+const subjectIsValid = (text: string) => {
+  if (text.length < 4) {
+    return false;
+  }
+  return true;
+};
+
+const messageIsValid = (text: string) => {
+  if (text.length < 15) {
+    return false;
+  }
+  return true;
+};
+
+export {
+  emailIsValid,
+  calcuateTotalPrice,
+  fullNameIsValid,
+  subjectIsValid,
+  messageIsValid,
+};

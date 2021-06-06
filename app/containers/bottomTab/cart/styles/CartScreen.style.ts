@@ -33,4 +33,10 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     fontSize: Fonts.size.h16,
   },
+
+  emptyCartView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });

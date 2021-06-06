@@ -10,7 +10,7 @@ import {
   AccountIcon,
 } from '../../components/icons';
 import CartScreen from './cart/CartScreen';
-import AccountScreen from './account/AccountScreen';
+import AccountStack from './accountStack/AccountStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -75,10 +75,10 @@ const BottomTabNavigation: FC = () => {
         }}
       />
       <Tab.Screen
-        name="AccountScreen"
-        component={AccountScreen}
+        name="AccountStack"
+        component={AccountStack}
         options={{
-          tabBarLabel: 'Account',
+          tabBarLabel: 'AccountStack',
           tabBarIcon: ({color, size}) => {
             return (
               <AccountIcon

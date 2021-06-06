@@ -25,16 +25,18 @@ const CartScreen = () => {
   };
 
   const _renderFooter = () => {
-    return (
-      <View style={styles.footer}>
-        <Text style={styles.totalPriceText}>
-          Total: {calcuateTotalPrice(cart)}$
-        </Text>
-        <TouchableOpacity style={styles.completeOrderButton}>
-          <Text style={styles.completeOrderButtonText}>Complete Order</Text>
-        </TouchableOpacity>
-      </View>
-    );
+    if (cart && Array.isArray(cart) && cart.length > 0) {
+      return (
+        <View style={styles.footer}>
+          <Text style={styles.totalPriceText}>
+            Total: {calcuateTotalPrice(cart)}$
+          </Text>
+          <TouchableOpacity style={styles.completeOrderButton}>
+            <Text style={styles.completeOrderButtonText}>Complete Order</Text>
+          </TouchableOpacity>
+        </View>
+      );
+    }
   };
 
   return (

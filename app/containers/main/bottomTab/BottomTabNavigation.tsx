@@ -21,7 +21,7 @@ const BottomTabNavigation: FC = () => {
         component={HomeStack}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({focused, color, size}) => {
+          tabBarIcon: ({color, size}) => {
             return (
               <HomeIcon
                 stroke={color}
@@ -38,7 +38,7 @@ const BottomTabNavigation: FC = () => {
         component={ContactScreen}
         options={{
           tabBarLabel: 'Contact',
-          tabBarIcon: ({focused, color, size}) => {
+          tabBarIcon: ({color, size}) => {
             return (
               <ContactIcon
                 stroke={color}

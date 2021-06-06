@@ -9,6 +9,10 @@ export const getProductsRequest = async () => {
         data: response?.data,
       });
     }
+    return Promise.reject({
+      statusCode: response?.status,
+      message: 'Something went wrong!',
+    });
   } catch (error) {
     return Promise.reject({
       statusCode: error.response.statusCode,

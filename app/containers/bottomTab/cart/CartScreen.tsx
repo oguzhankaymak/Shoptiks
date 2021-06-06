@@ -23,7 +23,11 @@ const CartScreen = () => {
         />
       );
     }
-    return <Text>Cart is empty</Text>;
+    return (
+      <View style={styles.emptyCartView}>
+        <Text>Cart is empty</Text>
+      </View>
+    );
   };
 
   const _renderFooter = () => {

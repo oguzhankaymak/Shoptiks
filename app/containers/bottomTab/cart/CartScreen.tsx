@@ -2,12 +2,14 @@ import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
 import styles from './styles/CartScreen.style';
-import {useAppSelector} from '../../../redux/Hooks';
+import {useAppDispatch, useAppSelector} from '../../../redux/Hooks';
 import CartList from '../../../components/cartList/Index';
 import {ICartProduct} from '../../../redux/cart/initialState/InitialState';
 import {calcuateTotalPrice} from '../../../utilities/Function';
+import {deleteProductFromCartAction} from '../../../redux/cart/actions/Actions';
 
 const CartScreen = () => {
+  const dispatch = useAppDispatch();
   const cart = useAppSelector(state => state.cartReducer.cartItem);
 
   const _renderContent = () => {
@@ -16,7 +18,7 @@ const CartScreen = () => {
         <CartList
           data={cart}
           deleteCartProductPress={(cartProduct: ICartProduct) =>
-            console.log(cartProduct)
+            dispatch(deleteProductFromCartAction(cartProduct) as any)
           }
         />
       );

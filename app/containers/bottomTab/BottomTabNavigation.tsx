@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeStack from './homeStack/HomeStack';
 import ContactScreen from './contact/ContactScreen';
-import {ContactIcon, HomeIcon} from '../../../components/icons';
+import {ContactIcon, HomeIcon} from '../../components/icons';
 
 const Tab = createBottomTabNavigator();
 

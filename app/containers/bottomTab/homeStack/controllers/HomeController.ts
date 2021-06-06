@@ -1,4 +1,4 @@
-import {request} from '../../../../../api/Request';
+import {request} from '../../../../api/Request';
 
 export const getProductsRequest = async () => {
   try {

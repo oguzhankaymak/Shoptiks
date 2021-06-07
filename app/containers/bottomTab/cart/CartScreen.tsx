@@ -3,7 +3,7 @@ import {View, Text, TouchableOpacity, Alert} from 'react-native';
 
 import styles from './styles/CartScreen.style';
 import {useAppDispatch, useAppSelector} from '../../../redux/Hooks';
-import CartList from '../../../components/cartList/Index';
+import CartList from '../../../components/cartList/CartList';
 import {ICartProduct} from '../../../redux/cart/initialState/InitialState';
 import {calcuateTotalPrice} from '../../../utilities/Function';
 import {deleteProductFromCartAction} from '../../../redux/cart/actions/Actions';

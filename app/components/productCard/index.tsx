@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {View, Text} from 'react-native';
 import {IProduct} from '../../containers/bottomTab/homeStack/controllers/data';
 import Button, {ButtonTypes} from '../button/Button';
-import {ProductInfo} from './ProductInfo';
+import ProductInfo from '../productInfo/ProductInfo';
 
 import styles from './styles/ProductCard.style';
 

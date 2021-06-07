@@ -2,10 +2,9 @@
 
 <!-- Contents -->
 
-## Contents
-
 - [About Project](#about-project)
   - [Purpose Of Project](#purpose-of-project)
+  - [API](#api)
 - [Installation](#installation)
   - [Usage](#usage)
 - [Test](#test)
@@ -51,6 +50,7 @@ npx react-native run-android
   or
 
 ```sh
+cd ios && pod install && cd ..
 npx react-native run-ios
 ```
 

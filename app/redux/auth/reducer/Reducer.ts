@@ -24,6 +24,12 @@ const AuthReducers = (state: IAuthState = InitialState, action: AnyAction) => {
         error: action.payload,
       };
     }
+    case AuthActionTypes.LOGOUT: {
+      return {
+        ...state,
+        email: '',
+      };
+    }
 
     default:
       return state;

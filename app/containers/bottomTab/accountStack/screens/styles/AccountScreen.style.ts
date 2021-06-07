@@ -32,7 +32,6 @@ export default StyleSheet.create({
 
   button: {
     width: deviceWidth - 150,
-    minHeight: 50,
     backgroundColor: Colors.white,
     elevation: 6,
     borderRadius: 10,
@@ -40,6 +39,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    padding: 15,
   },
 
   option: {

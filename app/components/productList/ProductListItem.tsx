@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {View} from 'react-native';
 
 import styles from './styles/ProductListItem.style';
-import ProductCard from '../../components/productCard';
+import ProductCard from '../../components/productCard/ProductCard';
 import {IProduct} from '../../containers/bottomTab/homeStack/controllers/data';
 
 type ProductCardProps = {

@@ -12,7 +12,7 @@ type ProductCardProps = {
   detailPress: () => void;
 };
 
-const Index: FC<ProductCardProps> = ({
+const ProductCard: FC<ProductCardProps> = ({
   product,
   addToCartPress,
   detailPress,
@@ -53,4 +53,4 @@ const Index: FC<ProductCardProps> = ({
   );
 };
 
-export default Index;
+export default ProductCard;

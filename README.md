@@ -8,6 +8,7 @@
   - [Purpose Of Project](#purpose-of-project)
 - [Installation](#installation)
   - [Usage](#usage)
+- [Test](#test)
 
 ## About Project
 
@@ -56,5 +57,13 @@ npx react-native run-ios
 ### Usage
 
 Login : You can enter any valid email and random password.
+
+## Test
+
+```sh
+yarn run test
+```
+<img width="435" alt="test" src="https://user-images.githubusercontent.com/36153454/121032798-4aecb680-c7b4-11eb-8393-c3b56185a44d.png">
+
 
 

@@ -22,7 +22,7 @@
 
 ### Purpose Of Project
 
-- User can shop, contact us and display last orders. So Shoptiks simple a mobile shoping application.
+- User can shop, contact us and display last orders. So Shoptiks is a simple shopping application.
 
 ### API
 
@@ -56,7 +56,7 @@ npx react-native run-ios
 
 ### Usage
 
-Login : You can enter any valid email and random password.
+Login: You can enter any valid email and random password.
 
 ## Test
 

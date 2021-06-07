@@ -24,9 +24,9 @@ const Login: FC = () => {
 
   const onChangeEmailText = (text: string) => {
     setEmail(text);
-    if (emailIsValid(text)) {
+    if (emailIsValid(text) && !isValidEmail) {
       setIsValidEmail(true);
-    } else {
+    } else if (isValidEmail) {
       setIsValidEmail(false);
     }
   };

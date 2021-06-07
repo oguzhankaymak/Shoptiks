@@ -78,7 +78,7 @@ const BottomTabNavigation: FC = () => {
         name="AccountStack"
         component={AccountStack}
         options={{
-          tabBarLabel: 'AccountStack',
+          tabBarLabel: 'Account',
           tabBarIcon: ({color, size}) => {
             return (
               <AccountIcon

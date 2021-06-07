@@ -3,8 +3,14 @@ import React, {FC} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeStack from './homeStack/HomeStack';
 import ContactScreen from './contact/ContactScreen';
-import {CartIcon, ContactIcon, HomeIcon} from '../../components/icons';
+import {
+  CartIcon,
+  ContactIcon,
+  HomeIcon,
+  AccountIcon,
+} from '../../components/icons';
 import CartScreen from './cart/CartScreen';
+import AccountStack from './accountStack/AccountStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -59,6 +65,23 @@ const BottomTabNavigation: FC = () => {
           tabBarIcon: ({color, size}) => {
             return (
               <ContactIcon
+                stroke={color}
+                color={color}
+                width={size}
+                height={size}
+              />
+            );
+          },
+        }}
+      />
+      <Tab.Screen
+        name="AccountStack"
+        component={AccountStack}
+        options={{
+          tabBarLabel: 'AccountStack',
+          tabBarIcon: ({color, size}) => {
+            return (
+              <AccountIcon
                 stroke={color}
                 color={color}
                 width={size}

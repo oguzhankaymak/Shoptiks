@@ -3,7 +3,7 @@ import {View, Text} from 'react-native';
 
 import styles from './styles/CartProductCard.style';
 import {ICartProduct} from '../../redux/cart/initialState/InitialState';
-import {ProductInfo} from '../productCard/ProductInfo';
+import ProductInfo from '../productInfo/ProductInfo';
 import Button, {ButtonTypes} from '../button/Button';
 
 type CartProductProps = {

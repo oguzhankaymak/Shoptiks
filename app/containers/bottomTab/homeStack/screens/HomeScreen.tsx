@@ -4,12 +4,12 @@ import {View, Text, ActivityIndicator} from 'react-native';
 import styles from './styles/HomeScreen.style';
 import {IProduct} from '../controllers/data';
 import {getProductsRequest} from '../controllers/HomeController';
-import ProductList from '../../../../components/productList/Index';
+import ProductList from '../../../../components/productList/ProductList';
 import Colors from '../../../../theme/Colors';
 import {useAppDispatch} from '../../../../redux/Hooks';
 import {addToCartAction} from '../../../../redux/cart/actions/Actions';
 
-const HomeScreen: FC = ({navigation}) => {
+const HomeScreen: FC<any> = ({navigation}) => {
   const dispatch = useAppDispatch();
   const [products, setProducts] = useState<IProduct[] | null>(null);
   const [isLoading, setIsLoading] = useState(false);

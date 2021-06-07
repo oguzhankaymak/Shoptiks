@@ -20,7 +20,7 @@ export default StyleSheet.create({
   },
 
   formItem: {
-    marginLeft: 30,
+    marginLeft: 40,
     marginTop: 40,
   },
 
@@ -60,7 +60,7 @@ export default StyleSheet.create({
   },
 
   footer: {
-    marginLeft: 30,
+    marginLeft: 40,
     marginVertical: 40,
   },
 });

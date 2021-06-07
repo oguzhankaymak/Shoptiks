@@ -13,6 +13,7 @@ export default StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 2,
     borderRadius: 10,
+    padding: 5,
   },
 
   container: {

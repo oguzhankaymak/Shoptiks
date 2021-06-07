@@ -31,7 +31,7 @@ export default StyleSheet.create({
   },
 
   button: {
-    width: deviceWidth - 150,
+    width: deviceWidth - 100,
     backgroundColor: Colors.white,
     elevation: 6,
     borderRadius: 10,

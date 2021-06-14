@@ -1,0 +1,19 @@
+name: CI Process
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    name: Code Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install environment
+        run: yarn install
+
+      - name: Run Tests
+        run: yarn run test

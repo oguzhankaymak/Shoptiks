@@ -21,8 +21,13 @@
 | @testing-library/react-native | 7.2.0   |
 
 ### Purpose Of Project
+The user can perform the following actions:
+- Able to display product list and product detail
+- Able to cart operations (product add, product delete and complete order)
+- Able to display last orders
+- Able to contact us 
 
-- User can shop, contact us and display last orders. So Shoptiks is a simple shopping application.
+So Shoptiks is a simple shopping application.
 
 ### API
 
@@ -60,10 +65,11 @@ Login: You can enter any valid email and random password.
 
 ## Test
 
+![CI](https://github.com/oguzhankaymak/DenemeCD/actions/workflows/main.yml/badge.svg)
+
 ```sh
 yarn run test
 ```
-<img width="435" alt="test" src="https://user-images.githubusercontent.com/36153454/121032798-4aecb680-c7b4-11eb-8393-c3b56185a44d.png">
 
 
 

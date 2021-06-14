@@ -65,7 +65,7 @@ Login: You can enter any valid email and random password.
 
 ## Test
 
-![CI](https://github.com/oguzhankaymak/DenemeCD/actions/workflows/main.yml/badge.svg)
+![CI](https://github.com/oguzhankaymak/Shoptiks/actions/workflows/main.yml/badge.svg)
 
 ```sh
 yarn run test
